@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+supabase
+python-dotenv
+httpx
+websockets
+groq
+streamlit
+websocket-client
+requests
+# For async context management if needed, but standard lib usually suffices
