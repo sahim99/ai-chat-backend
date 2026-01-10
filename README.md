@@ -2,7 +2,7 @@
 
 A full-stack, real-time AI chat application built with **FastAPI** (Backend) and **Streamlit** (Frontend). It features streaming responses, session-based conversational memory, and a high-end glassmorphic UI.
 
-![UI Screenshot](https://via.placeholder.com/800x450.png?text=Application+Screenshot)
+![UI Screenshot](./Sample.png)
 
 ---
 
