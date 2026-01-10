@@ -8,4 +8,5 @@ groq
 streamlit
 websocket-client
 requests
-# For async context management if needed, but standard lib usually suffices
+streamlit-autorefresh
+uuid

@@ -9,8 +9,8 @@ import requests
 from streamlit_autorefresh import st_autorefresh
 
 # ---------------- CONFIG ----------------
-BACKEND_WS_URL = os.getenv("BACKEND_WS_URL", "ws://localhost:8000/ws/session")
-BACKEND_HTTP_URL = os.getenv("BACKEND_HTTP_URL", "http://localhost:8000")
+BACKEND_WS_URL = os.getenv("BACKEND_WS_URL", "wss://ai-chat-backend-production-f884.up.railway.app/ws/session")
+BACKEND_HTTP_URL = os.getenv("BACKEND_HTTP_URL", "https://ai-chat-backend-production-f884.up.railway.app")
 
 # ---------------- STATE ----------------
 if "session_id" not in st.session_state: st.session_state.session_id = None
