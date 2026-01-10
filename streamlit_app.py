@@ -9,7 +9,7 @@ import requests
 from streamlit_autorefresh import st_autorefresh
 
 # ---------------- CONFIG ----------------
-BACKEND_WS_URL = os.getenv("BACKEND_WS_URL", "wss://ai-chat-backend-production-f884.up.railway.app/ws/session")
+BACKEND_WS_URL = os.getenv("BACKEND_WS_URL", "wss://ai-chat-backend-production-f884.up.railway.app/ws/session/{session_id}")
 BACKEND_HTTP_URL = os.getenv("BACKEND_HTTP_URL", "https://ai-chat-backend-production-f884.up.railway.app")
 
 # ---------------- STATE ----------------
@@ -378,7 +378,8 @@ with st.sidebar:
             st.session_state.messages = []
             st.session_state.summary = None
             st.session_state.connected = True
-            st.session_state.ws = start_ws(f"{BACKEND_WS_URL}/{sid}", st.session_state.ws_queue)
+            ws_url = BACKEND_WS_URL.format(session_id=sid)
+            st.session_state.ws = start_ws(ws_url, st.session_state.ws_queue)
             st.rerun()
     else:
         st.markdown("##### Actions")
