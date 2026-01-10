@@ -2,7 +2,7 @@
 
 A full-stack, real-time AI chat application built with **FastAPI** (Backend) and **Streamlit** (Frontend). It features streaming responses, session-based conversational memory, and a high-end glassmorphic UI.
 
-![UI Screenshot](./Sample.png)
+![UI Screenshot](./Sample-1.png)
 
 ---
 
@@ -12,6 +12,7 @@ A full-stack, real-time AI chat application built with **FastAPI** (Backend) and
 *   **Session Management**: Create new sessions, persist chat history, and generate session summaries.
 *   **Premium UI**: Custom CSS-styled Streamlit interface with glassmorphism, floating inputs, and animated bubbles.
 *   **Scalable Backend**: Asynchronous architecture using FastAPI and Supabase.
+*   **Production Ready**: Deployed on Railway (Backend) and Streamlit Cloud (Frontend).
 
 ---
 
@@ -79,7 +80,7 @@ pip install -r requirements.txt
 ### 3. Environment Variables
 Create a `.env` file in the root directory:
 ```env
-# Backend Settings
+# Backend Settings (Local)
 BACKEND_WS_URL=ws://localhost:8000/ws/session
 BACKEND_HTTP_URL=http://localhost:8000
 
@@ -91,7 +92,22 @@ SUPABASE_KEY=your_supabase_anon_key
 
 ---
 
-## ▶️ How to Run
+## 🌍 Deployment
+
+### Backend (Railway)
+The backend is deployed on Railway and exposes:
+*   **HTTP**: `https://ai-chat-backend-production-f884.up.railway.app`
+*   **WebSocket**: `wss://ai-chat-backend-production-f884.up.railway.app/ws/session/{session_id}`
+
+### Frontend (Streamlit Cloud)
+The frontend connects to the Railway backend by default. To deploy on Streamlit Cloud:
+1.  Push code to GitHub.
+2.  Connect repository to Streamlit Cloud.
+3.  The app will automatically use the production backend URLs defined in `streamlit_app.py`.
+
+---
+
+## ▶️ How to Run Locally
 
 You need to run the Backend and Frontend in separate terminals.
 
